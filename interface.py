@@ -57,5 +57,3 @@ def interfaceJogo(erros, letras_inseridas, palavra_display, vitoria_derrota=1):
             print(' '*5,f'{palavra_display}'.center(largura - 12),end='')
         print()
     print('-'*45)
-
-interfaceJogo(0, ['a','b','c','d'], '___a')
