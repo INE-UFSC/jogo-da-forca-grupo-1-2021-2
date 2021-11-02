@@ -1,12 +1,16 @@
 # Código de um jogo da forca
 # Fazer os imports
 
+from banco import palavra
+
 letras_digitadas = []
 tentativas = y
 # Estabelecer o número de tentativas (Boneco)
-palavra = x 
-#recebe uma palavra aleatória do banco
+palavra = palavra()
+# Recebe uma palavra aleatória do banco
 erros = 0
+
+# Chama a interface
 
 while True:
     letra = input("Digite uma letra: ").lower()
@@ -14,9 +18,10 @@ while True:
         letra = input("Digite uma letra: ").lower()
     letras_digitadas.append(letra)
 
+# Chama as funções
     ...
     
     if erros == tentativas:
         break
 
-    
+
