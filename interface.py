@@ -46,8 +46,10 @@ def interfaceJogo(erros, letras_inseridas, palavra_display):
     for i in range(4):
         print(forca[i]+boneco[erros][i], end='')
         if i == 0:
-            print(' '*10,letras_inseridas,end='')
+            print(' '*5,f'{letras_inseridas}'.center(largura - 12),end='')
         elif i == 2:
             print(' '*5,f'{palavra_display}'.center(largura - 12),end='')
         print()
     print('-'*45)
+
+interfaceJogo(0, ['a','b','c','d'], '___a')
