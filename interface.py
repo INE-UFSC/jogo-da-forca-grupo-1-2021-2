@@ -32,15 +32,21 @@ forca = (
     '|  ',
     '_____')
 
-#exemplo de uso: interfaceJogo(0, ['a','b','c'], '___a') ou interfaceJogo(3, 'abc', ['_','_','_','a'])
+#exemplo de uso: interfaceJogo(0, ['a','b','c'], '___a',0) ou interfaceJogo(3, 'abc', ['_','_','_','a'],2)
 #o jogador vai ter 7 tentativas
-
+#vitoria_derrota - 0=derrota, 1=normal, 2=vitoria
 largura = 45
-def interfaceJogo(erros, letras_inseridas, palavra_display):
+def interfaceJogo(erros, letras_inseridas, palavra_display, vitoria_derrota=1):
     os.system('cls||clear')
     print('-'*45)
-    print(f'Tentativas restantes: {7 - erros}')
-    print(forca[-1])
+    if vitoria_derrota == 0:
+        print('\033[1;31;40mDERROTA'.center(largura+9))
+    elif vitoria_derrota == 1:
+        print(f'Tentativas restantes: {7 - erros}')
+    elif vitoria_derrota == 2:
+        print('\033[1;32;40mVITORIA'.center(largura+9))
+
+    print('\033[0;37;40m'+forca[-1])
     letras_inseridas = ', '.join(letras_inseridas)
     palavra_display = ' '.join(palavra_display)
     for i in range(4):
