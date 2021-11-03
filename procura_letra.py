@@ -9,5 +9,3 @@ def procura_letra(palavra, letras):
     else: 
         status = 'acertou'  
     return status, palavra
-
-print(procura_letra('abacate', ['o', 'a', 'b', 'c', 't', 'e']))
